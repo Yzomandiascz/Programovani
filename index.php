@@ -1,5 +1,10 @@
 <?php
-
+require 'tracy/tracy.phar';
+use Tracy\Debugger;
+Debugger::enable();
+Debugger::$strictMode = true;
+Debugger::$maxDepth = 10;
+Debugger::$maxLength = 180;
 $a = 6;
 $b = 9;
 
@@ -12,56 +17,56 @@ echo "<br>\<br>";
 
 print "<br>Odčítání = ";                                // -
 echo $a-$b;
-var_dump($a-$b);
+dump($a-$b);
 
 print "<br>Sčítání = ";                              // +
 echo $a+$b;
-var_dump($a+$b);
+dump($a+$b);
 
 print "<br>Dělení = ";                             // :
 echo $a/$b;
-var_dump($a/$b);
+dump($a/$b);
 
 print "<br>Násobení = ";                        // *
 echo $a*$b;
-var_dump($a*$b);
+dump($a*$b);
 
 print "<br> ";
 echo $a++;
-var_dump($a++);
+dump($a++);
 
 print "<br> ";
 echo $a--;
-var_dump($a--);
+dump($a--);
 
 print "<br> ";
 echo $a += $b;
-var_dump($a+=$b);
+dump($a+=$b);
 
 print "<br>";
 echo $a -= $b;
-var_dump($a-=$b);
+dump($a-=$b);
 
 print "<br>";
 echo $a *= $b;
-var_dump($a*=$b);
+dump($a*=$b);
 
 print "<br>";
 echo $a /= $b;
-var_dump($a/=$b);
+dump($a/=$b);
 
 print "<br>Má $a jinou hodnotu než $b?<br>";
-var_dump($a!=$b);
+dump($a!=$b);
 
 print "<br>  Čísla se rovnají?";                             // jestli se rovnaji cisla
 echo $a==$b;
-var_dump($a==$b);
+dump($a==$b);
 
 print "<br>Je $a větší než $b?<br>";                   // porovnání hodnot
-var_dump($a>$b);
+dump($a>$b);
 
 print "<br>Je $b větší než $a?<br>";               // porovnání hodnot
-var_dump($a<$b);
+dump($a<$b);
 
 echo 3 . 8;
 echo 6.9;
@@ -113,7 +118,7 @@ $nakup = array(1 =>"housky",
                8 =>"kečup",
                9 =>"mléko",
                10 =>"čičinka");
-var_dump($nakup);
+dump($nakup);
 $auta = array(
     "prvni" => array(
     "druhy" => array(
@@ -172,6 +177,6 @@ $auta = array(
         )
     )
 );
-                   var_dump($auta);
+                   dump($auta);
 ?>
 
