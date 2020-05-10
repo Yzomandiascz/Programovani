@@ -178,7 +178,7 @@ $auta = array(
     )
 );
                    dump($auta);
-var_dump($nba['prvni']);
+var_dump($auta['prvni']);
 echo "<br>";
 function isvalid(array$param1, string$param2) {
 foreach ($param1 as $value) {
