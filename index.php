@@ -178,5 +178,18 @@ $auta = array(
     )
 );
                    dump($auta);
+var_dump($nba['prvni']);
+echo "<br>";
+function isvalid(array$param1, string$param2) {
+foreach ($param1 as $value) {
+if (strpos($param2, $value)) {
+return true;
+}
+}
+return false;
+}
+$Motoveci = array("auta","kola");
+$veta = "Některá auta jsou přetočená";
+var_dump(isvalid($Motoveci, $veta));
 ?>
 
